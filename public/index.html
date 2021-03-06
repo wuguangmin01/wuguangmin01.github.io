@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Hailey&#39;s Techdoc Website</title>
+<meta name="generator" content="Hugo 0.81.0" />
+<link href="https://github.com/wuguangmin01/wuguangmin01.github.io.git//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://github.com/wuguangmin01/wuguangmin01.github.io.git/">
+<link rel="stylesheet" href="https://github.com/wuguangmin01/wuguangmin01.github.io.git/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://github.com/wuguangmin01/wuguangmin01.github.io.git/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://github.com/wuguangmin01/wuguangmin01.github.io.git/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://github.com/wuguangmin01/wuguangmin01.github.io.git/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="">
+<meta itemprop="description" content=""></head>
+<body><div class="container"><header>
+<h1>Hailey&#39;s Techdoc Website</h1>
+</header>
+
+<div class="content-container">
+<main><p><strong>结合“Hugo + Github + Markdown”搭建一个以“hugo-theme-techdoc”为主题的文档网站</strong></p>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>已安装 Homebrew。</li>
+<li>已注册Github账号。</li>
+<li>已创建新的Github repository。</li>
+</ul>
+<p><strong>操作步骤：</strong></p>
+<ol>
+<li>
+<p>打开一个终端，执行以下命令，安装Hugo。</p>
+<p>brew install hugo</p>
+</li>
+<li>
+<p>执行以下命令，查看Hugo是否安装成功，检查Hugo版本号。</p>
+<p>hugo version</p>
+<p>回显信息如下，说明安装成功。</p>
+<p>hugo <em>v0.81.0+extended darwin/amd64 BuildDate=unknown</em></p>
+</li>
+<li>
+<p>执行以下命令，创建一个新的网站。</p>
+<p>hugo new site <em>techdoc</em></p>
+</li>
+<li>
+<p>执行以下命令，添加一个主题。</p>
+<p>cd <em>/Users/wuguangmin/techdoc</em></p>
+<p>git init</p>
+<p>git submodule add <em>git submodule add <a href="https://github.com/thingsym/hugo-theme-techdoc.git">https://github.com/thingsym/hugo-theme-techdoc.git</a> themes/hugo-theme-techdoc</em></p>
+</li>
+<li>
+<p>执行以下命令，在根目录下的“config.toml ”文件中添加新数据。</p>
+<p>echo &lsquo;theme = &quot; <em>hugo-theme-techdoc</em>&quot;&rsquo; &raquo; config.toml</p>
+<p>说明：</p>
+</li>
+</ol>
+<ul>
+<li>Theme配置项指的是所选主题的名称，必须与步骤3中添加的主题相同。在本例中，即theme = &quot; hugo-theme-techdoc&quot;。</li>
+<li>在“访达”中运用组合键“Command+Shift+G”，在弹出页面的输入框中输入：“/Users/wuguangmin/techdoc”，找到config.toml文件，鼠标右键选择“打开方式 &gt; 文本编辑“。将baseURL 的值&quot;http://example.org/&ldquo;改为“https://github.com/wuguangmin01/wuguangmin01.github.io.git/”，title 的值&quot;My New Hugo Site”改为  &ldquo;Hailey&rsquo;s Techdoc Website”,按住“Command+S”保存。</li>
+</ul>
+<ol start="6">
+<li>
+<p>在“访达”中运用组合键“Command+Shift+G”，在弹出页面的输入框中输入：“*/Users/wuguangmin/techdoc/content/”，放入已编写完成的_index.md文件，按住“Command+S”保存。</p>
+</li>
+<li>
+<p>执行以下命令，启动Hugo server。</p>
+<p>hugo server</p>
+<p>回显信息如下，说明Server启动成功。</p>
+</li>
+<li>
+<p>使用浏览器打开&quot;http://localhost:1313/wuguangmin01/wuguangmin01.github.io.git/&ldquo;预览。</p>
+</li>
+<li>
+<p>根据网站页面提示，在/user/wuguangmin/techdoc/content,在此目录下放入已编写完成的_index.md文件。</p>
+</li>
+<li>
+<p>执行以下命令在sunshine/public目录下，为Git本地库添加远程连接。</p>
+<p>git remote add origin <a href="mailto:git@github.com">git@github.com</a>: <a href="mailto:git@github.com">git@github.com</a>:<em>wuguangmin01/wuguangmin01.github.io.git</em></p>
+</li>
+<li>
+<p>执行以下命令，查看Git 本地库与远程库的关联情况。</p>
+<p>cat.git/config</p>
+<p>回显信息如下,说明Git 本地库与远程库关联成功。</p>
+</li>
+<li>
+<p>执行以下命令，通过commit提交修改到本地库，并写一个commit message 来简洁描述修改内容。</p>
+<p>git status</p>
+<p>git add .</p>
+<p>git commit -m “Add a new post”</p>
+</li>
+<li>
+<p>执行以下命令，将修改推至远程库。</p>
+<p>git push -u origin master</p>
+<p>git status</p>
+</li>
+</ol>
+<nav class="pagination">
+</nav><div class="edit-meta">
+
+<br></div><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

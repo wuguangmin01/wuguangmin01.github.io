@@ -1,0 +1,7 @@
+
+
+baseURL = "https://github.com/wuguangmin01/wuguangmin01.github.io.git/"
+languageCode = "en-us"
+title = "Hailey's Techdoc Website"
+theme = "hugo-theme-techdoc"
+
